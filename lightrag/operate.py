@@ -99,6 +99,7 @@ def chunking_by_token_size(
     overlap_token_size: int = 128,
     max_token_size: int = 1024,
 ) -> list[dict[str, Any]]:
+    """对输入文档进行分块"""
     tokens = tokenizer.encode(content)
     results: list[dict[str, Any]] = []
     if split_by_character:
